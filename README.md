@@ -1,5 +1,7 @@
 # auto-type-abi
 
+This CLI tool takes a JSON representation of a contract ABI file as an input, and returns a mapped typing, compatible with our Ethereum-ABI-Interface library. From the ABI, the parser generates a typescript definition file, fully compatible with our Ethereum-ABI-Interface. 
+
 ## Usage 
 
 Compile code with `tsc`
@@ -21,3 +23,29 @@ fillInterfaces: boolean; // Fill in interface function types
 outputDir: string; // Where to output type file
 printToConsole: boolean; // Print to console or not
 ```
+
+### Example JSON
+
+```json
+{
+  "interface": "Registry",
+  "outputMappings": {
+    "resolver": ["resolverAddress"],
+    "owner": ["ownerAddress"],
+    "ttl": ["timeToLive"]
+  },
+  "outputDir": "./index.d.ts",
+  "abiDir": "./test/auction.json",
+  "printToConsole": false,
+  "fillInterfaces": true
+}
+
+```
+
+#### Example usage with JS object made by [PLACEHOLDER]
+
+```js
+ import Registry from '<outputDir>.d.ts'
+ import RegistryABI from './registryABI.json'
+ const registry:Registry = [PLACEHOLDER](RegistryABI) as Registry
+ ```
