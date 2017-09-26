@@ -1,13 +1,13 @@
 {
-  "name": "autoabi",
+  "name": "auto-type-abi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "HenryNguyen5",
+  "license": "MIT",
   "dependencies": {
     "command-line-args": "^4.0.7"
   },
