@@ -6,7 +6,7 @@ Compile code with `tsc`
 
 `node ./dist/index --config ./<configDir>/config.json`
 
-``` json
+``` ts
 interface: string; // The name of the interface to generate
 inputMappings: {
 [key: string]: string[]; // Optional mappings for input parameter names for the generated object
