@@ -6,7 +6,7 @@
     "ttl": ["timeToLive"]
   },
   "outputDir": "./index.d.ts",
-  "abiDir": "./test/auction.json",
+  "abiDir": "../../src/test/auction.json",
   "printToConsole": false,
   "fillInterfaces": true
 }
